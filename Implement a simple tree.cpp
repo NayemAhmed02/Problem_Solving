@@ -4,6 +4,8 @@ using namespace std;
 template <typename T>
 class Treenode
 {
+public:
+
     T data;
     vector<Treenode*> children;
 
@@ -15,17 +17,17 @@ class Treenode
 
 void printTree(Treenode<int>* root)
 {
-    cout<<root.data<<" : ";
+    cout<<root->data<<" : ";
 
-    for(int i=0; i<root.children.size(); i++)
+    for(int i=0; i<root->children.size(); i++)
     {
-        cout<<root.children[i]<<" , ";
+        cout<<root->children[i]->data<<" , ";
     }
     cout<<endl;
 
-    for(int i=0; i<root.children.size(); i++)
+    for(int i=0; i<root->children.size(); i++)
     {
-        printTree(root.children[i]);
+        printTree(root->children[i]);
     }
 }
 
@@ -39,10 +41,10 @@ int main()
     Treenode<int>* fourth = new Treenode<int>(5);
 
     // Make connection
-    root.children.push_back(first);
-    root.children.push_back(second);
-    first.children.push_back(third);
-    first.children.push_back(fourth);
+    root->children.push_back(first);
+    root->children.push_back(second);
+    first->children.push_back(third);
+    first->children.push_back(fourth);
 
     // Print tree
     printTree(root);

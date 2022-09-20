@@ -104,6 +104,7 @@ void printTreeLevelWise(Treenode<int>* root)
     }
 }
 
+// 1 2 3 4 5 8 -1 -1 -1 6 7 -1 -1 -1 -1 -1 -1
 int main()
 {
     // Take input from user
@@ -112,6 +113,7 @@ int main()
     // print the elements of tree
     cout<<"\n\nThe elements of given tree print below : \n\n";
     printTreeLevelWise(root);
+
 
     // After all work finally delete the tree from memory
     delete root;

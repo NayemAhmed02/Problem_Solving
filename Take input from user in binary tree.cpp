@@ -61,7 +61,7 @@ int main()
     Treenode<int>* root = takeInput();
 
     // print the elements of tree
-    cout<<"The elements of given tree print below : \n\n";
+    cout<<"\n\nThe elements of given tree print below : \n\n";
     printTree(root);
 
     // After all work finally delete the tree from memory
